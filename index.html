@@ -24,8 +24,127 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+        <section data-markdown data-separator="\n----\n" data-separator-vertical="\n--\n">
+        # Our Team SRE
+        俺達のsite reliability engineering
+
+        ARASHI, Jumpei
+
+        11, Jan. 2017
+        ----
+
+        Agenda
+
+        * SREとは
+            + googleの例
+            + facebookの例
+        * Error Budget
+        * 当面のタスク
+
+        ----
+
+        What's SRE??
+
+        --
+
+        Site Reliability Engineering
+
+        --
+
+        サイト信頼性エンジニアリング
+
+        --
+
+        Googleの例
+
+        * 仕事内容の50%を保守運用
+        * 残りの50%は保守、日々のオペレーションを自動化、便利化する仕事
+
+        --
+
+        facebookの例(facebookのSREのインタビューより)
+
+        * 技術的な議論を抜きにして言うと **facebookが常に最高の状態になっていることをmake sureする義務**
+        * facebookのユーザが世界中からアクセスできて、読み込みが早くて、すべての機能が正しく動くことを保証する
+
+        ----
+
+        っでは私達のチームにおけるSREとは??
+
+        --
+
+        **読み込みが早くて、**
+
+        **すべての機能が正しく動くことを保証する。**
+
+        --
+
+        **レスポンスタイム**
+
+        --
+
+        ただしdatadogによる観測なのでリリースするまでわからない
+
+        --
+        
+        **障害発生件数**
+
+        --
+        
+        * エンジニアの集中力の妨げ
+        * 開発速度の低下
+
+        ----
+
+        そこでError Budgetの登場ですね
+
+        --
+
+        Error Budget = エラー予算
+
+        --
+
+        開発陣と運用保守の溝を埋めるもの
+
+        * 開発陣はこのError Budgetが閾値を超えるまではがんがん新規開発をすすめる
+        * 運用保守はこのError Budgetが閾値を超えないように守りきる
+
+        --
+
+        私達のチームでのError Budetは...
+
+        --
+
+        障害件数を月々50件以内に抑える = Zapierの残クレジット数を50以下に抑える
+
+        ----
+
+        当面のタスク
+
+        --
+
+        * エラー通知部屋の整理
+            + アラート通知を減らして快適な開発生活を
+            + 即対応が必要なものだけdatadog-alert部屋を活用
+            + なんか起こってるよ的な意味でのログとしてdatadog-warn部屋を作成
+
+        --
+
+
+        * 負荷試験の自動化
+
+        --
+
+        * 割れ窓っぽくなってる部分の修復
+            + jenkinsのupdate
+            + EB Solution Stackのupdate
+
+        ----
+
+        Fin.
+
+
+				</section>
 			</div>
 		</div>
 
